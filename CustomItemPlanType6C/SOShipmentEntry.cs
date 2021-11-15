@@ -1,40 +1,6 @@
-using System;
-using System.Linq;
-using System.Collections;
-using System.Collections.Generic;
-//using System.Collections.Immutable;
-using System.Runtime.Serialization;
-using System.Text;
 using PX.Data;
-using PX.Data.BQL;
-using PX.Data.BQL.Fluent;
-using PX.Data.WorkflowAPI;
-using PX.Common;
-using PX.Objects.AR;
-using PX.Objects.CM;
-using PX.Objects.CR;
-using PX.Objects.CS;
-using PX.Objects.EP;
-using PX.Objects.GL;
 using PX.Objects.IN;
-using PX.SM;
 using PX.Objects.IN.Overrides.INDocumentRelease;
-using POLineType = PX.Objects.PO.POLineType;
-using POReceiptLine = PX.Objects.PO.POReceiptLine;
-//using PX.CarrierService;
-using PX.Data.DependencyInjection;
-//using PX.LicensePolicy;
-using PX.Objects.SO.Services;
-using PX.Objects.PO;
-using PX.Objects.AR.MigrationMode;
-using PX.Objects.Common;
-using PX.Objects.Common.Discount;
-using PX.Common.Collection;
-using PX.Objects.SO.GraphExtensions.CarrierRates;
-using PX.Api;
-using ShipmentActions = PX.Objects.SO.SOShipmentEntryActionsAttribute;
-using PX.Objects;
-using PX.Objects.SO;
 
 namespace PX.Objects.SO
 {

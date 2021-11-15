@@ -1,23 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using PX.Data;
-using PX.Data.BQL;
-using PX.Data.ReferentialIntegrity.Attributes;
-using PX.Objects.Common.Extensions;
 using PX.Objects.CS;
-using PX.Objects.GL.FinPeriods;
 using PX.Objects.IN.Overrides.INDocumentRelease;
-using PX.Objects.SO;
-using POReceiptLineSplit = PX.Objects.PO.POReceiptLineSplit;
-using SOShipLineSplit = PX.Objects.SO.Table.SOShipLineSplit;
-using PX.Objects;
-using PX.Objects.IN;
 
 namespace PX.Objects.IN
 {
-  public class INIntegrityCheckExt6TPlan : PXGraphExtension<INIntegrityCheck>
+    public class INIntegrityCheckExt6TPlan : PXGraphExtension<INIntegrityCheck>
   {
     private string SoTransferPlanType = InPlanConstantsSOTransfers.Plan6C;
 

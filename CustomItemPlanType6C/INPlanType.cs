@@ -1,14 +1,12 @@
-using PX.Data.ReferentialIntegrity.Attributes;
-using PX.Data;
-using PX.Objects.IN;
-using PX.Objects;
-using System.Collections.Generic;
 using System;
+
+using PX.Data;
 using PX.Objects.IN.Overrides.INDocumentRelease;
+
 
 namespace PX.Objects.IN
 {
-   public partial class INPlanTypeExtSOTransfers : PXCacheExtension<INPlanType>
+    public partial class INPlanTypeExtSOTransfers : PXCacheExtension<INPlanType>
   {
     //usrInclQtySOTransfer
     public abstract class usrInclQtySOTransfer : PX.Data.BQL.BqlShort.Field<usrInclQtySOTransfer> { }

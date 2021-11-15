@@ -1,24 +1,21 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using PX.Data;
-using PX.Objects.CS;
-using PX.Objects.CM;
-using PX.Objects.GL;
-using SiteStatus = PX.Objects.IN.Overrides.INDocumentRelease.SiteStatus;
-using LocationStatus = PX.Objects.IN.Overrides.INDocumentRelease.LocationStatus;
 using System.Linq;
+
 using PX.Common;
-using PX.Objects.Common.Extensions;
-using PX.Objects;
-using PX.Objects.IN;
+using PX.Data;
+using PX.Objects.CM;
+using PX.Objects.CS;
+using PX.Objects.GL;
 using PX.Objects.IN.Overrides.INDocumentRelease;
+
+using LocationStatus = PX.Objects.IN.Overrides.INDocumentRelease.LocationStatus;
+using SiteStatus = PX.Objects.IN.Overrides.INDocumentRelease.SiteStatus;
 
 namespace PX.Objects.IN
 {
-  
-  
-  public partial class InventorySummaryEnquiryResultExtSOTransfers : PXCacheExtension<InventorySummaryEnquiryResult>
+    public partial class InventorySummaryEnquiryResultExtSOTransfers : PXCacheExtension<InventorySummaryEnquiryResult>
   {
 
     #region QtySOTransfer

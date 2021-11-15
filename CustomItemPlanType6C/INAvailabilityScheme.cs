@@ -1,9 +1,8 @@
-using PX.Data.ReferentialIntegrity.Attributes;
-using PX.Data;
-using PX.Objects.IN;
-using PX.Objects;
-using System.Collections.Generic;
 using System;
+using System.Collections.Generic;
+
+using PX.Data;
+
 
 namespace PX.Objects.IN
 {

@@ -1,35 +1,11 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Text;
-using PX.Common;
-using PX.Objects.Common.Extensions;
-using PX.Objects.Common.GraphExtensions.Abstract;
-using PX.Objects.Common.GraphExtensions.Abstract.DAC;
-using PX.Objects.Common.GraphExtensions.Abstract.Mapping;
 using PX.Data;
-using PX.Data.ReferentialIntegrity.Attributes;
-using PX.Objects.CS;
-using PX.Objects.GL;
-using PX.Objects.CM;
-using PX.Objects.IN.Overrides.INDocumentRelease;
-using PX.Objects.IN.PhysicalInventory;
-using PX.Objects.IN.Services;
-using PX.Objects.SO;
-using PX.Objects.AP;
-using PX.Objects.GL.FinPeriods;
-using PX.Objects.PM;
-using PX.Objects.PO.LandedCosts;
-using PX.Objects;
-using PX.Objects.IN;
 
 namespace PX.Objects.IN.Overrides.INDocumentRelease
 {
-  
-  //public partial class SiteStatusExtSOTransfers : InSiteStatusExtSOTransfers
-  public partial class SiteStatusExtSOTransfers : PXCacheExtension<SiteStatus>
+
+    //public partial class SiteStatusExtSOTransfers : InSiteStatusExtSOTransfers
+    public partial class SiteStatusExtSOTransfers : PXCacheExtension<SiteStatus>
   {
     public abstract class usrInclQtySOTransfers : PX.Data.BQL.BqlBool.Field<usrInclQtySOTransfers> { }
     protected Boolean? _usrInclQtySOTransfer;

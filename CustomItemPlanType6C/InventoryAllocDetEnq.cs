@@ -1,31 +1,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using PX.Api;
+
 using PX.Common;
-using PX.Objects.CR;
-using PX.SM;
 using PX.Data;
-using PX.Objects.AR;
-using PX.Objects.BQLConstants;
-using PX.Objects.CS;
-using PX.Objects.GL;
-using PX.Objects.SO;
-using PX.Objects.PO;
 using PX.Objects.IN.Attributes;
-using System.Web.Compilation;
-using PX.Objects.Common.Attributes;
-using IQtyAllocated = PX.Objects.IN.Overrides.INDocumentRelease.IQtyAllocated;
-using PX.Objects;
-using PX.Objects.IN;
+
 
 namespace PX.Objects.IN
 {
-  public partial class InventoryAllocDetEnqFilterExtSOTransfer : PXCacheExtension<InventoryAllocDetEnqFilter>
+    public partial class InventoryAllocDetEnqFilterExtSOTransfer : PXCacheExtension<InventoryAllocDetEnqFilter>
   {
     #region QtySOTrnasfers
     public abstract class usrQtySOTransfer : PX.Data.BQL.BqlDecimal.Field<usrQtySOTransfer> { }
