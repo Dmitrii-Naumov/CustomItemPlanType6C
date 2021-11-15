@@ -4,7 +4,7 @@ using PX.Objects.IN.Overrides.INDocumentRelease;
 
 namespace PX.Objects.SO
 {
-    public class SOShipmentEntryCustomPlanExtension : PXGraphExtension<SOShipmentEntry>
+	public class SOShipmentEntryCustomPlanExtension : PXGraphExtension<SOShipmentEntry>
     {
         public PXSelect<INItemPlan> dummyitemplan;
         public override void Initialize()
@@ -32,18 +32,6 @@ namespace PX.Objects.SO
         public virtual void UpdateAllocatedQuantitiesWithCustomPlan( INItemPlan plan, bool revert = false)
         {
             //InPlanConstantsSOTransfers.UpdateAllocatedQuantitiesWithCustomPlan(Base, plan, revert);
-        }
-    }
-
-    public class SOShipmentEntryExt6TPlan : PXGraphExtension<SOShipmentEntryCustomPlanExtension, SOShipmentEntry>
-    {
-        public delegate void UpdateAllocatedQuantitiesWithCustomPlanDel(INItemPlan plan, bool revert);
-        [PXOverride]
-        public virtual void UpdateAllocatedQuantitiesWithCustomPlan(INItemPlan plan, bool revert, 
-            UpdateAllocatedQuantitiesWithCustomPlanDel BaseMehtod)
-        {
-            BaseMehtod(plan, revert);
-            InPlanConstantsSOTransfers.UpdateAllocatedQuantitiesWithCustomPlan(Base, plan, revert);
         }
     }
 }
