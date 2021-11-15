@@ -56,7 +56,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Examples.cs" />
     <Compile Include="INAvailabilityScheme.cs" />
     <Compile Include="INDocumentRelease.cs" />
     <Compile Include="INIntegrityCheck.cs" />
