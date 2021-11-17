@@ -1,0 +1,77 @@
+﻿<Sql TableName="AddingcustomPlanTypeandSettingSOType" CustomScript="#CDATA">
+    <CDATA name="CustomScript"><![CDATA[declare @CustomPlanType char(2) = '6C'
+declare @CustomPlanTypeDescr nvarchar(60) = 'Custom Plan Type'
+declare @companyid int = 1
+declare @CustomSOType char(2) = 'TR'
+ 
+-- take companymask from pre-existing plan
+declare @CompanyMask varbinary(32) =
+(select CompanyMask  from INPlanType where CompanyID = @companyid and PlanType = '60')
+ 
+insert into InPlanTYpe
+(CompanyID,PlanType,Descr,IsFixed,IsSupply,IsDemand,IsForDate,InclQtyFSSrvOrdBooked,InclQtyFSSrvOrdAllocated,
+InclQtyFSSrvOrdPrepared,InclQtySOBackOrdered,InclQtySOPrepared,InclQtySOBooked,InclQtySOShipped,InclQtySOShipping,InclQtyInTransit,InclQtyInTransitToSO,InclQtyPOReceipts,InclQtyPOPrepared,InclQtyPOOrders,InclQtyINIssues,InclQtyINReceipts,InclQtyINAssemblyDemand,InclQtyINAssemblySupply,InclQtyInTransitToProduction,InclQtyProductionSupplyPrepared,InclQtyProductionSupply,InclQtyPOFixedProductionPrepared,InclQtyPOFixedProductionOrders,InclQtyProductionDemandPrepared,InclQtyProductionDemand,InclQtyProductionAllocated,InclQtySOFixedProduction,InclQtyProdFixedPurchase,InclQtyProdFixedProduction,InclQtyProdFixedProdOrdersPrepared,InclQtyProdFixedProdOrders,InclQtyProdFixedSalesOrdersPrepared,InclQtyProdFixedSalesOrders,InclQtyINReplaned,InclQtyFixedFSSrvOrd,InclQtyPOFixedFSSrvOrd,InclQtyPOFixedFSSrvOrdPrepared,InclQtyPOFixedFSSrvOrdReceipts,InclQtySOFixed,InclQtyPOFixedOrders,InclQtyPOFixedPrepared,InclQtyPOFixedReceipts,InclQtySODropShip,InclQtyPODropShipOrders,InclQtyPODropShipPrepared,InclQtyPODropShipReceipts,DeleteOnEvent,ReplanOnEvent,CompanyMask,usrInclQtySOTransfer)
+values
+(1, --CompanyID
+@CustomPlanType, --PlanType
+@CustomPlanTypeDescr, --Descr
+0, --IsFixed
+0, --IsSupply
+1, --IsDemand
+1, --IsForDate
+0, --InclQtyFSSrvOrdBooked
+0, --InclQtyFSSrvOrdAllocated
+0, --InclQtyFSSrvOrdPrepared
+0, --InclQtySOBackOrdered
+0, --InclQtySOPrepared
+0, --InclQtySOBooked
+0, --InclQtySOShipped
+0, --InclQtySOShipping
+0, --InclQtyInTransit
+0, --InclQtyInTransitToSO
+0, --InclQtyPOReceipts
+0, --InclQtyPOPrepared
+0, --InclQtyPOOrders
+0, --InclQtyINIssues
+0, --InclQtyINReceipts
+0, --InclQtyINAssemblyDemand
+0, --InclQtyINAssemblySupply
+0, --InclQtyInTransitToProduction
+0, --InclQtyProductionSupplyPrepared
+0, --InclQtyProductionSupply
+0, --InclQtyPOFixedProductionPrepared
+0, --InclQtyPOFixedProductionOrders
+0, --InclQtyProductionDemandPrepared
+0, --InclQtyProductionDemand
+0, --InclQtyProductionAllocated
+0, --InclQtySOFixedProduction
+0, --InclQtyProdFixedPurchase
+0, --InclQtyProdFixedProduction
+0, --InclQtyProdFixedProdOrdersPrepared
+0, --InclQtyProdFixedProdOrders
+0, --InclQtyProdFixedSalesOrdersPrepared
+0, --InclQtyProdFixedSalesOrders
+0, --InclQtyINReplaned
+0, --InclQtyFixedFSSrvOrd
+0, --InclQtyPOFixedFSSrvOrd
+0, --InclQtyPOFixedFSSrvOrdPrepared
+0, --InclQtyPOFixedFSSrvOrdReceipts
+0, --InclQtySOFixed
+0, --InclQtyPOFixedOrders
+0, --InclQtyPOFixedPrepared
+0, --InclQtyPOFixedReceipts
+0, --InclQtySODropShip
+0, --InclQtyPODropShipOrders
+0, --InclQtyPODropShipPrepared
+0, --InclQtyPODropShipReceipts
+0, --DeleteOnEvent
+1, --ReplanOnEvent
+@CompanyMask, --CompanyMask
+1 --usrInclQtySOTransfer
+)
+ 
+update SOOrderTypeOperation
+set OrderPlanType = @CustomPlanType
+where companyid = @companyid
+and OrderType = @CustomSOType]]></CDATA>
+</Sql>
