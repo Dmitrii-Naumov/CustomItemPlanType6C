@@ -6,7 +6,7 @@ using PX.Data;
 
 namespace PX.Objects.IN
 {
-    public sealed class INAvailabilitySchemeExtSOTransfer : PXCacheExtension<INAvailabilityScheme>
+    public sealed class INAvailabilitySchemeExtPlan6C : PXCacheExtension<INAvailabilityScheme>
     {
         public abstract class usrInclQtySOTransfer : PX.Data.BQL.BqlBool.Field<usrInclQtySOTransfer> { }
         [PXDBBool]

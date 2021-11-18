@@ -19,8 +19,8 @@ namespace PX.Objects.IN.Overrides.INDocumentRelease
             bal.PersistEvenZero = origPersistEvenZero;
 
             //INSiteStatus bali = (INSiteStatus)bal;
-            SiteStatusExtSOTransfers balext = bal.GetExtension<SiteStatusExtSOTransfers>();
-            columns.Update<SiteStatusExtSOTransfers.usrQtySOTransfer>(balext.UsrQtySOTransfer, PXDataFieldAssign.AssignBehavior.Summarize);
+            SiteStatusExtPlan6C balext = bal.GetExtension<SiteStatusExtPlan6C>();
+            columns.Update<SiteStatusExtPlan6C.usrQtySOTransfer>(balext.UsrQtySOTransfer, PXDataFieldAssign.AssignBehavior.Summarize);
 
             if (sender.GetStatus(row) == PXEntryStatus.Inserted && IsZero(bal) && bal.PersistEvenZero != true)
             {
@@ -43,7 +43,7 @@ namespace PX.Objects.IN.Overrides.INDocumentRelease
             }
             else
             {
-                SiteStatusExtSOTransfers aext = ((SiteStatus)a).GetExtension<SiteStatusExtSOTransfers>();
+                SiteStatusExtPlan6C aext = ((SiteStatus)a).GetExtension<SiteStatusExtPlan6C>();
                 return base.IsZero(a) && (aext.UsrQtySOTransfer == 0);
             }
         }

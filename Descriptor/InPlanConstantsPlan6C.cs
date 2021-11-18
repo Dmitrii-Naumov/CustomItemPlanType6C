@@ -18,7 +18,7 @@ namespace PX.Objects.IN
         {
             if (planType == InPlanConstantsSOTransfers.Plan6C)
             {
-                return (typeof(INPlanTypeExtSOTransfers.usrInclQtySOTransfer));
+                return (typeof(INPlanTypeExtPlan6C.usrInclQtySOTransfer));
             }
             else
                 return INPlanConstants.ToInclQtyField(planType);
@@ -59,10 +59,10 @@ namespace PX.Objects.IN
 
                 //SieStatus
                 SiteStatus palncurr = (SiteStatus)graph.Caches[typeof(SiteStatus)].Current;
-                SiteStatusExtSOTransfers targetext =
-                  (SiteStatusExtSOTransfers)graph.Caches[typeof(SiteStatus)].GetExtension<SiteStatusExtSOTransfers>(palncurr);
+                SiteStatusExtPlan6C targetext =
+                  (SiteStatusExtPlan6C)graph.Caches[typeof(SiteStatus)].GetExtension<SiteStatusExtPlan6C>(palncurr);
 
-                INPlanTypeExtSOTransfers plantypeext = plantype.GetExtension<INPlanTypeExtSOTransfers>();
+                INPlanTypeExtPlan6C plantypeext = plantype.GetExtension<INPlanTypeExtPlan6C>();
                 targetext.UsrQtySOTransfer += (revertplan ? -plantypeext.UsrInclQtySOTransfer : plantypeext.UsrInclQtySOTransfer ?? 0) * plan.PlanQty;
 
                 palncurr.QtyAvail -= targetext.UsrInclQtySOTransfers == true ?

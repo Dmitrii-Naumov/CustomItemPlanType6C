@@ -5,7 +5,7 @@ using PX.Data;
 
 namespace PX.Objects.IN
 {
-	public sealed class INPlanTypeExtSOTransfers : PXCacheExtension<INPlanType>
+	public sealed class INPlanTypeExtPlan6C : PXCacheExtension<INPlanType>
     {
         //usrInclQtySOTransfer
         public abstract class usrInclQtySOTransfer : PX.Data.BQL.BqlShort.Field<usrInclQtySOTransfer> { }
