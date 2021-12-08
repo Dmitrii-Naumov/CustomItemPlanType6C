@@ -1,0 +1,87 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9BC6D61A-5D4B-4D57-BC6B-5E3F9D04377E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CustomItemPlanType6C</RootNamespace>
+    <AssemblyName>CustomItemPlanType6C</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <WarningLevel>3</WarningLevel>
+    <FileVersion>20.213.0026</FileVersion>
+    <InformationalVersion>20.213.0026</InformationalVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\CustomizationPackage\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\CustomizationPackage\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PX.Common">
+      <HintPath>..\..\..\..\builds\20.219.0018\MV02_1918\Bin\PX.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Common.Std">
+      <HintPath>..\..\..\..\builds\20.219.0018\MV02_1918\Bin\PX.Common.Std.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Data">
+      <HintPath>..\..\..\..\builds\20.219.0018\MV02_1918\Bin\PX.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Data.BQL.Dynamic">
+      <HintPath>..\..\..\..\builds\20.219.0018\MV02_1918\Bin\PX.Data.BQL.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Data.BQL.Fluent">
+      <HintPath>..\..\..\..\builds\20.219.0018\MV02_1918\Bin\PX.Data.BQL.Fluent.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Objects">
+      <HintPath>..\..\..\..\builds\20.219.0018\MV02_1918\Bin\PX.Objects.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CacheExtensions\INAvailabilityScheme.cs" />
+    <Compile Include="Descriptor\InPlanConstantsPlan6C.cs" />
+    <Compile Include="Descriptor\SiteStatusAccumulatorPlan6CAttribute.cs" />
+    <Compile Include="GraphExtensions\INDocumentRelease.cs" />
+    <Compile Include="GraphExtensions\INIntegrityCheck.cs" />
+    <Compile Include="CacheExtensions\INPlanType.cs" />
+    <Compile Include="GraphExtensions\INRegisterEntryBase.cs" />
+    <Compile Include="GraphExtensions\InventoryAllocDetEnq.cs" />
+    <Compile Include="CacheExtensions\InventoryAllocDetEnqFilterExtSOTransfer.cs" />
+    <Compile Include="GraphExtensions\InventorySummaryEnq.cs" />
+    <Compile Include="CacheExtensions\SiteStatusExtSOTransfers.cs" />
+    <Compile Include="CacheExtensions\InventorySummaryEnquiryResultExtSOTransfers.cs" />
+    <Compile Include="GraphExtensions\SOOrderEntry.cs" />
+    <Compile Include="GraphExtensions\SOShipmentEntry.cs" />
+    <Compile Include="GraphExtensions\AbstractExtensions\INIntegrityCheckCustomPlanExtension.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GraphExtensions\AbstractExtensions\SOOrderEntryCustomPlanExtension.cs" />
+    <Compile Include="GraphExtensions\AbstractExtensions\SOShipmentEntryCustomPlanExtension.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
