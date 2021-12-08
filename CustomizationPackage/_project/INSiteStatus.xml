@@ -1,3 +1,0 @@
-﻿<Table TableName="INSiteStatus">
-    <Column TableName="INSiteStatus" ColumnName="usrQtySOTransfer" ColumnType="decimal" AllowNull="True" DecimalPrecision="6" DecimalLength="25" IsNewColumn="True" IsUnicode="True" />
-</Table>
