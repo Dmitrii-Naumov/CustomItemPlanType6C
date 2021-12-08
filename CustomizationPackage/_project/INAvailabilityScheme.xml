@@ -1,3 +1,0 @@
-﻿<Table TableName="INAvailabilityScheme">
-    <Column TableName="INAvailabilityScheme" ColumnName="usrInclQtySOTransfer" ColumnType="bool" AllowNull="True" DecimalPrecision="0" DecimalLength="0" IsNewColumn="True" IsUnicode="True" />
-</Table>

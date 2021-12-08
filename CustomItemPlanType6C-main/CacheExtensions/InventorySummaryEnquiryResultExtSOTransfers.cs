@@ -3,7 +3,7 @@ using PX.Data;
 
 namespace PX.Objects.IN
 {
-	public sealed class InventorySummaryEnquiryResultExtSOTransfers : PXCacheExtension<InventorySummaryEnquiryResult>
+	public sealed class InventorySummaryEnquiryResultExtPlan6C : PXCacheExtension<InventorySummaryEnquiryResult>
     {
         #region QtySOTransfer
         public abstract class usrQtySOTransfer : PX.Data.BQL.BqlDecimal.Field<usrQtySOTransfer> { }

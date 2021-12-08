@@ -5,7 +5,7 @@ using PX.Objects.IN.Attributes;
 
 namespace PX.Objects.IN
 {
-	public sealed class InventoryAllocDetEnqFilterExtSOTransfer : PXCacheExtension<InventoryAllocDetEnqFilter>
+	public sealed class InventoryAllocDetEnqFilterExtPlan6C : PXCacheExtension<InventoryAllocDetEnqFilter>
     {
         #region QtySOTrnasfers
         public abstract class usrQtySOTransfer : PX.Data.BQL.BqlDecimal.Field<usrQtySOTransfer> { }

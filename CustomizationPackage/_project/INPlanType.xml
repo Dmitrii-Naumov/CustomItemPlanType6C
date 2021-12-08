@@ -1,3 +1,0 @@
-﻿<Table TableName="INPlanType">
-    <Column TableName="INPlanType" ColumnName="usrInclQtySOTransfer" ColumnType="short" AllowNull="True" DecimalPrecision="0" DecimalLength="0" IsNewColumn="True" IsUnicode="True" />
-</Table>

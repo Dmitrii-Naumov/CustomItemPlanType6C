@@ -32,24 +32,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PX.Common">
-      <HintPath>..\..\..\Acumatica Sites\21r112\Bin\PX.Common.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\builds\20.219.0018\MV02_1918\Bin\PX.Common.dll</HintPath>
     </Reference>
     <Reference Include="PX.Common.Std">
-      <HintPath>..\..\..\Acumatica Sites\21r112\Bin\PX.Common.Std.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\builds\20.219.0018\MV02_1918\Bin\PX.Common.Std.dll</HintPath>
     </Reference>
     <Reference Include="PX.Data">
-      <HintPath>..\..\..\Acumatica Sites\21r112\Bin\PX.Data.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\builds\20.219.0018\MV02_1918\Bin\PX.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PX.Data.BQL.Dynamic">
+      <HintPath>..\..\..\..\builds\20.219.0018\MV02_1918\Bin\PX.Data.BQL.Dynamic.dll</HintPath>
     </Reference>
     <Reference Include="PX.Data.BQL.Fluent">
-      <HintPath>..\..\..\Acumatica Sites\21r112\Bin\PX.Data.BQL.Fluent.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\builds\20.219.0018\MV02_1918\Bin\PX.Data.BQL.Fluent.dll</HintPath>
     </Reference>
     <Reference Include="PX.Objects">
-      <HintPath>..\..\..\Acumatica Sites\21r112\Bin\PX.Objects.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\..\builds\20.219.0018\MV02_1918\Bin\PX.Objects.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -59,9 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CacheExtensions\INAvailabilityScheme.cs" />
+    <Compile Include="Descriptor\InPlanConstantsPlan6C.cs" />
+    <Compile Include="Descriptor\SiteStatusAccumulatorPlan6CAttribute.cs" />
     <Compile Include="GraphExtensions\INDocumentRelease.cs" />
     <Compile Include="GraphExtensions\INIntegrityCheck.cs" />
-    <Compile Include="Descriptor\InPlanConstantsSOTransfers.cs" />
     <Compile Include="CacheExtensions\INPlanType.cs" />
     <Compile Include="GraphExtensions\INRegisterEntryBase.cs" />
     <Compile Include="GraphExtensions\InventoryAllocDetEnq.cs" />
@@ -69,12 +68,14 @@
     <Compile Include="GraphExtensions\InventorySummaryEnq.cs" />
     <Compile Include="CacheExtensions\SiteStatusExtSOTransfers.cs" />
     <Compile Include="CacheExtensions\InventorySummaryEnquiryResultExtSOTransfers.cs" />
-    <Compile Include="Descriptor\SiteStatusAccumulatorSOTransfersAttribute.cs" />
     <Compile Include="GraphExtensions\SOOrderEntry.cs" />
     <Compile Include="GraphExtensions\SOShipmentEntry.cs" />
+    <Compile Include="GraphExtensions\AbstractExtensions\INIntegrityCheckCustomPlanExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="GraphExtensions\SOShipmentEntryExt6TPlan.cs" />
+    <Compile Include="GraphExtensions\AbstractExtensions\SOOrderEntryCustomPlanExtension.cs" />
+    <Compile Include="GraphExtensions\AbstractExtensions\SOShipmentEntryCustomPlanExtension.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

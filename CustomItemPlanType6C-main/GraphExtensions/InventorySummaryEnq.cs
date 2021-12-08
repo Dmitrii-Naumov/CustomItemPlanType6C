@@ -843,8 +843,8 @@ namespace PX.Objects.IN
                     ret.TotalCost = 0m;
                     ret.QtyExpired = 0m;
                     ret.ControlTimetamp = ControlTimeStamp();
-                    InventorySummaryEnquiryResultExtSOTransfers retext = Base.Caches[typeof(InventorySummaryEnquiryResult)].GetExtension<InventorySummaryEnquiryResultExtSOTransfers>(ret);
-                    SiteStatusExtSOTransfers ss_recex = ss_rec.GetExtension<SiteStatusExtSOTransfers>();
+                    InventorySummaryEnquiryResultExtPlan6C retext = Base.Caches[typeof(InventorySummaryEnquiryResult)].GetExtension<InventorySummaryEnquiryResultExtPlan6C>(ret);
+                    SiteStatusExtPlan6C ss_recex = ss_rec.GetExtension<SiteStatusExtPlan6C>();
                     retext.UsrQtySOTransfer = ss_recex.UsrQtySOTransfer;
 
                     if (PXAccess.FeatureInstalled<FeaturesSet.warehouseLocation>() || filter.ExpandByLotSerialNbr == true)
@@ -856,14 +856,14 @@ namespace PX.Objects.IN
                         aggregate.SiteID = ret.SiteID;
 
                         aggregate = (SiteStatus)cache.Insert(aggregate);
-                        SiteStatusExtSOTransfers aggrex = aggregate.GetExtension<SiteStatusExtSOTransfers>();
+                        SiteStatusExtPlan6C aggrex = aggregate.GetExtension<SiteStatusExtPlan6C>();
                         //InventorySummaryEnquiryResultExtSOTransfers retex = ret.GetExtension<InventorySummaryEnquiryResultExtSOTransfers>();
                         ret = Subtract<InventorySummaryEnquiryResult>(ret, aggregate);
                     }
 
                     if (!PXAccess.FeatureInstalled<FeaturesSet.warehouseLocation>() || filter.LocationID == null)
                     {
-                        if (!ret.IsZero())
+                        if (!(ret.IsZero() && retext.UsrQtySOTransfer == 0))
                         {
                             resultset.Add((ret, res, res, null));
                         }

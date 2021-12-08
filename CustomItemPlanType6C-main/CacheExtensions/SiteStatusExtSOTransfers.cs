@@ -3,12 +3,12 @@ using PX.Data;
 
 namespace PX.Objects.IN.Overrides.INDocumentRelease
 {
-	public sealed class SiteStatusExtSOTransfers : PXCacheExtension<SiteStatus>
+	public sealed class SiteStatusExtPlan6C : PXCacheExtension<SiteStatus>
     {
         public abstract class usrInclQtySOTransfers : PX.Data.BQL.BqlBool.Field<usrInclQtySOTransfers> { }
         [PXBool()]
         [PXDefault(typeof(Select<INAvailabilityScheme, Where<INAvailabilityScheme.availabilitySchemeID, Equal<Current<SiteStatus.availabilitySchemeID>>>>),
-          CacheGlobal = true, SourceField = typeof(INAvailabilitySchemeExtSOTransfer.usrInclQtySOTransfer), PersistingCheck = PXPersistingCheck.Nothing)]
+          CacheGlobal = true, SourceField = typeof(INAvailabilitySchemeExtPlan6C.usrInclQtySOTransfer), PersistingCheck = PXPersistingCheck.Nothing)]
         public Boolean? UsrInclQtySOTransfers
         {
             get; set;
