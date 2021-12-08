@@ -33,21 +33,19 @@
   <ItemGroup>
     <Reference Include="PX.Common">
       <HintPath>..\..\..\..\builds\20.219.0018\MV02_1918\Bin\PX.Common.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="PX.Common.Std">
       <HintPath>..\..\..\..\builds\20.219.0018\MV02_1918\Bin\PX.Common.Std.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="PX.Data">
       <HintPath>..\..\..\..\builds\20.219.0018\MV02_1918\Bin\PX.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="PX.Data.BQL.Dynamic">
-      <HintPath>..\..\..\..\builds\20.219.0018\MV02_1918\Bin\PX.Data.BQL.Dynamic.dll</HintPath>
-    </Reference>
-    <Reference Include="PX.Data.BQL.Fluent">
-      <HintPath>..\..\..\..\builds\20.219.0018\MV02_1918\Bin\PX.Data.BQL.Fluent.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="PX.Objects">
       <HintPath>..\..\..\..\builds\20.219.0018\MV02_1918\Bin\PX.Objects.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
